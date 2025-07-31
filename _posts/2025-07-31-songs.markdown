@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "推荐几首我喜欢的歌"
+date:   2025-07-31 12:06:04 +0800
+categories: jekyll update
+---
+
+### **1. 《Stairway to Heaven》 – Led Zeppelin（1971）**  
+作为摇滚史上最伟大的史诗之一，《Stairway to Heaven》以其层层递进的编曲、深邃的歌词和Jimmy Page的传奇吉他solo闻名。从轻柔的民谣风格逐渐攀升至狂野的硬摇滚高潮，这首歌不仅是Led Zeppelin的代表作，更被誉为“摇滚圣歌”。  
+
+### **2. 《Bohemian Rhapsody》 – Queen（1975）**  
+Freddie Mercury用这首六分钟的华丽摇滚歌剧，打破了传统歌曲结构的界限。融合了歌剧、民谣、重金属等多种风格，《Bohemian Rhapsody》以其戏剧性的起伏、多声部和声和无与伦比的创造力，成为Queen最具标志性的作品，至今仍是全球乐迷的挚爱。  
+
+### **3. 《We Will Rock You》 – Queen（1977）**  
+简单却极具冲击力的节奏，让《We Will Rock You》成为体育场摇滚的典范。Brian May的吉他riff搭配全场跺脚与拍手的互动，使这首歌成为激励人心的战歌，无论是演唱会还是体育赛事，它总能点燃全场激情。  
+
+### **4. 《Like a Rolling Stone》 – Bob Dylan（1965）**  
+Dylan用这首长达六分钟的歌曲彻底改变了流行音乐的面貌。尖锐的歌词、Al Kooper的风琴riff和Dylan标志性的嗓音，让《Like a Rolling Stone》成为民谣摇滚的里程碑，也被誉为“史上最伟大的歌曲”之一。  
+
+### **5. 《Blowin' in the Wind》 – Bob Dylan（1963）**  
+作为60年代民权运动的圣歌，《Blowin' in the Wind》以诗意的歌词和简单的旋律，提出了关于和平、自由与正义的永恒问题。Pete Seeger、Joan Baez等无数音乐人翻唱过这首歌，使其成为抗议歌曲的典范，影响深远。  
