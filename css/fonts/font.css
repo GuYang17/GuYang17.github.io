@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'SourceHanSans';
+    font-display: swap;
+    src: url('font/SourceHanSans-Bold.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSans';
+    font-display: swap;
+    src: url('font/SourceHanSans-ExtraLight.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSans';
+    font-display: swap;
+    src: url('font/SourceHanSans-Heavy.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSans';
+    font-display: swap;
+    src: url('font/SourceHanSans-Light.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSans';
+    font-display: swap;
+    src: url('font/SourceHanSans-Medium.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSans';
+    font-display: swap;
+    src: url('font/SourceHanSans-Regular.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSans';
+    font-display: swap;
+    src: url('font/SourceHanSans-Semibold.ttc') format('truetype');
+}
+
+@font-face{
+    font-family: 'JetBrains Mono';
+    font-display: swap;
+    src: url('font/JetBrainsMono-Regular.ttf') format("truetype");
+}
+body {
+    font-family: 'JetBrains Mono', 'SourceHanSans';
+}
