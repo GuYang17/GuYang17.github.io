@@ -58,6 +58,10 @@
   --card-shadow: rgba(0, 0, 0, 0.12);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--background);
@@ -187,7 +191,7 @@ body {
 .friend-links {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .friend-card {
@@ -200,6 +204,7 @@ body {
   border: 1px solid var(--border-color);
   text-decoration: none;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  min-width: 0;
 }
 
 .friend-card:hover {
@@ -213,6 +218,12 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.friend-info {
+  min-width: 0;
+  flex: 1;
 }
 
 .friend-info strong {
@@ -226,6 +237,7 @@ body {
   color: var(--muted);
   line-height: 1.5;
   font-size: 0.95rem;
+  word-break: break-word;
 }
 
 .content-area {
@@ -376,5 +388,21 @@ body {
   .banner-left img {
     width: 150px;
     height: 150px;
+  }
+
+  .content-area {
+    padding: 1.5rem 1rem;
+  }
+
+  .friend-links {
+    grid-template-columns: 1fr;
+  }
+
+  .friend-card {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
   }
 }
