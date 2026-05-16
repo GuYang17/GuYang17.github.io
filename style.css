@@ -1,5 +1,69 @@
 :root {
   --theme-color: #0961ee;
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-strong: #f6f9ff;
+  --text: rgb(14, 14, 14);
+  --muted: #5a6874;
+  --border-color: #e0e0e0;
+  --link: #1f2d3d;
+  --banner-link: #5a6874;
+  --banner-link-hover: #1e293b;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow: rgba(13, 36, 88, 0.05);
+}
+
+:root[data-theme='dark'] {
+  --theme-color: #75b8ff;
+  --background: #0b1220;
+  --surface: #131a2a;
+  --surface-strong: #1d2b45;
+  --text: #e9efff;
+  --muted: #94a3b8;
+  --border-color: #24334f;
+  --link: #d6e0ff;
+  --banner-link: #94a3b8;
+  --banner-link-hover: #f8fafc;
+  --shadow: rgba(0, 0, 0, 0.24);
+  --card-shadow: rgba(8, 19, 41, 0.35);
+}
+
+:root[data-theme='gruvbox'] {
+  --theme-color: #d79921;
+  --background: #282828;
+  --surface: #32302f;
+  --surface-strong: #3c3836;
+  --text: #ebdbb2;
+  --muted: #a89984;
+  --border-color: #504945;
+  --link: #ebdbb2;
+  --banner-link: #bdae93;
+  --banner-link-hover: #fabd2f;
+  --shadow: rgba(0, 0, 0, 0.25);
+  --card-shadow: rgba(0, 0, 0, 0.45);
+}
+
+:root[data-theme='gruvbox-light'] {
+  --theme-color: #d79921;
+  --background: #f9f5d7;
+  --surface: #f2e5bc;
+  --surface-strong: #ebdbb2;
+  --text: #3c3836;
+  --muted: #7c6f64;
+  --border-color: #ebdbb2;
+  --link: #3c3836;
+  --banner-link: #7c6f64;
+  --banner-link-hover: #d65d0e;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --card-shadow: rgba(0, 0, 0, 0.12);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .container {
@@ -9,7 +73,7 @@
 
 .banner {
   display: flex;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--border-color);
   gap: 24px;
   padding: 16px 0;
 }
@@ -29,18 +93,18 @@
 .banner-right h1 {
   font-size: 42px;
   margin: 0 0 8px 0;
-  color: rgb(14, 14, 14);
+  color: var(--text);
 }
 
 .banner-tagline {
-  color: #424242;
+  color: var(--muted);
   font-size: 18px;
   margin: 0 0 12px 0;
 }
 
 .banner-bio {
   font-size: 16px;
-  color: #5a6874;
+  color: var(--muted);
   margin: 0;
   font-style: italic;
 }
@@ -52,14 +116,48 @@
 }
 
 .banner-links a {
-  color: #5a6874;
+  color: var(--banner-link);
   font-size: 24px;
   transition: all 0.3s;
   text-decoration: none;
 }
 
 .banner-links a:hover {
-  color: #1e293b;
+  color: var(--banner-link-hover);
+}
+
+.theme-tools {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 100;
+}
+
+.fab-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.fab-btn:hover {
+  transform: translateY(-2px);
+  background: var(--surface-strong);
+}
+
+.fab-btn i {
+  font-size: 1.05rem;
 }
 
 .content-area {
@@ -69,7 +167,7 @@
 }
 
 .content-area h1 {
-  color: rgb(14, 14, 14);
+  color: var(--text);
   font-size: 2.2rem;
   line-height: 1.1;
   margin-bottom: 2rem;
@@ -92,7 +190,7 @@
 }
 
 .content-area p {
-  color: rgb(14, 14, 14);
+  color: var(--text);
   line-height: 1.8;
   margin-bottom: 1.25rem;
   font-size: 1.05rem;
@@ -105,7 +203,7 @@
 }
 
 .content-area ul li {
-  color: rgb(14, 14, 14);
+  color: var(--text);
   line-height: 1.9;
   font-size: 1.02rem;
   padding: 0.2rem 0 0.2rem 1.5rem;
@@ -122,7 +220,7 @@
 }
 
 .content-area ul li a {
-  color: #1f2d3d;
+  color: var(--link);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -150,7 +248,7 @@
 }
 
 .skill-title {
-  color: rgb(34, 34, 34);
+  color: var(--text);
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -163,7 +261,7 @@
 }
 
 .skill-track {
-  background: #eaecef;
+  background: var(--surface-strong);
   border-radius: 999px;
   height: 0.9rem;
   overflow: hidden;
@@ -173,13 +271,13 @@
 .skill-fill {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, var(--theme-color), #4a7cff);
+  background: var(--theme-color);
   border-radius: 999px;
   transition: width 0.5s ease;
 }
 
 .skill-percent {
-  color: #5a6571;
+  color: var(--muted);
   font-size: 0.95rem;
   white-space: nowrap;
 }
@@ -187,7 +285,7 @@
 .skill-desc {
   grid-column: 1 / -1;
   margin: 0.45rem 0 0;
-  color: #5a6571;
+  color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.6;
 }
