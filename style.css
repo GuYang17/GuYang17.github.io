@@ -482,6 +482,10 @@ html[data-theme="dark"] .header {
   border-bottom-color: var(--border-color);
 }
 
+html[data-theme="dark"] .header-title {
+  color: var(--text-primary);
+}
+
 html[data-theme="dark"] .header-logo {
   background: var(--bg-secondary);
   box-shadow: 0 4px 16px var(--shadow-md);
