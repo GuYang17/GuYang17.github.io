@@ -1,0 +1,639 @@
+/* 全局重置 & 字体 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.8;
+  padding: 2rem 1rem;
+}
+
+/* 容器 — 无卡片，仅内边距与最大宽 */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* 所有区域共用间距 */
+section {
+  margin-top: 3.5rem;
+}
+
+.area-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #e2e8f0;
+  color: #0f172a;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 0 1rem;
+  border-bottom: 1px solid #e9edf2;
+  margin-bottom: 1rem;
+}
+
+.header-logo {
+  width: 140px;          /* 放大头像 */
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.header-info {
+  flex: 1;
+}
+
+.header-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin-bottom: 0.2rem;
+}
+
+.header-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #475569;
+  margin-bottom: 0.3rem;
+}
+
+.header-quote {
+  font-style: italic;
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 0.8rem;
+  border-left: 3px solid #cbd5e1;
+  padding-left: 1rem;
+}
+
+/* header 社交链接 — 无下划线 */
+.header-social {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+}
+
+.social-link {
+  color: #475569;
+  font-size: 1.5rem;
+  transition: color 0.2s ease, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+/* ===== About / 段落 ===== */
+.area-paragraph {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: #1e293b;
+  max-width: 75ch;
+}
+
+/* ===== Basic Info (列表) ===== */
+.area-unordered-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.2rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.info-item i {
+  width: 1.4rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* 嵌套列表：竖直显示，带缩进 */
+.organization-list,
+.admired-list,
+.os-list,
+.editor-list,
+.game-list {
+  list-style: none;
+  padding-left: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-top: 0.1rem;
+}
+
+.organization-list li,
+.admired-list li,
+.os-list li,
+.editor-list li,
+.game-list li {
+  position: relative;
+  padding-left: 0.6rem;
+}
+.organization-list li::before,
+.admired-list li::before,
+.os-list li::before,
+.editor-list li::before,
+.game-list li::before {
+  content: "•";
+  color: #94a3b8;
+  margin-right: 0.3rem;
+}
+
+.org-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 450;
+  border-bottom: 1px dotted #b9d0f0;
+  transition: border-color 0.2s;
+}
+.org-link:hover {
+  border-bottom-color: #2563eb;
+}
+
+/* ===== Skills (标签) ===== */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  margin-top: 0.2rem;
+}
+
+.skill-tag {
+  background: #ffffff;
+  padding: 0.4rem 1rem 0.4rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 450;
+  color: #1e293b;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+  border: 1px solid #eef2f6;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.15s ease;
+}
+
+.skill-tag:hover {
+  border-color: #cbd5e1;
+  background: #fafcfd;
+}
+
+.skill-tag-progress {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.1rem 0.5rem;
+  border-radius: 30px;
+  letter-spacing: 0.01em;
+}
+
+/* ===== Full Facts ===== */
+.facts-list .fact-item {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.facts-list .fact-item strong {
+  font-weight: 500;
+  color: #0f172a;
+}
+.facts-list ul {
+  list-style: none;
+  padding-left: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-top: 0.1rem;
+}
+.facts-list ul li {
+  display: block;
+}
+.facts-list ul li::before {
+  content: "•";
+  color: #94a3b8;
+  margin-right: 0.3rem;
+}
+.facts-list ul li:first-child::before {
+  content: "•";
+  margin-right: 0.3rem;
+}
+
+/* ===== Friends ===== */
+.friend-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2.5rem;
+  padding: 0.5rem 0 0.2rem;
+}
+
+.friend-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.2rem 1.2rem 1rem;
+  min-width: 170px;
+  flex: 1 0 auto;
+  max-width: 240px;
+  border: 1px solid #eef2f6;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+}
+
+.friend-card:hover {
+  border-color: #dce2ea;
+  background: #fafcfe;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.friend-card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.friend-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f1f5f9;
+  margin-bottom: 0.6rem;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.friend-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0.1rem 0 0.15rem;
+}
+
+.friend-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.friend-cta {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* ===== Projects & Contact ===== */
+.projects-link {
+  font-size: 1rem;
+}
+.github-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dotted #b9d0f0;
+}
+.github-link:hover {
+  border-bottom-color: #2563eb;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin: 0.2rem 0 0.2rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.3rem 0.2rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contact-link i {
+  font-size: 1.2rem;
+  color: #475569;
+  width: 1.4rem;
+  text-align: center;
+}
+
+.contact-link:hover {
+  color: #0f172a;
+  border-bottom-color: #94a3b8;
+}
+.contact-link:hover i {
+  color: #0f172a;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0 0.5rem;
+  border-top: 1px solid #e9edf2;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.footer-text {
+  margin: 0.2rem 0;
+}
+
+.footer-github-link {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1px dotted #b9d0f0;
+}
+.footer-github-link:hover {
+  border-bottom-color: #2563eb;
+}
+
+/* ===== Floating Action Buttons ===== */
+.floating-buttons {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 999;
+}
+
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+  background: #1d4ed8;
+}
+
+.floating-btn:active {
+  transform: translateY(-1px);
+}
+
+.floating-btn-top {
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.floating-btn-top:hover {
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+/* 响应式调整 */
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+  --shadow-sm: rgba(0, 0, 0, 0.02);
+  --shadow-md: rgba(0, 0, 0, 0.05);
+}
+
+/* ===== 深色主题 ===== */
+html[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+  --shadow-sm: rgba(0, 0, 0, 0.3);
+  --shadow-md: rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .container {
+  background: transparent;
+}
+
+html[data-theme="dark"] .area-title {
+  border-bottom-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .header {
+  border-bottom-color: var(--border-color);
+}
+
+html[data-theme="dark"] .header-logo {
+  background: var(--bg-secondary);
+  box-shadow: 0 4px 16px var(--shadow-md);
+}
+
+html[data-theme="dark"] .header-subtitle,
+html[data-theme="dark"] .header-quote {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .social-link {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .social-link:hover {
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .area-paragraph {
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .info-item {
+  border-bottom-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .info-item i {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .skill-tag {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  box-shadow: 0 1px 4px var(--shadow-sm);
+}
+
+html[data-theme="dark"] .skill-tag:hover {
+  background: #1e293b;
+  border-color: #475569;
+}
+
+html[data-theme="dark"] .skill-tag-progress {
+  background: #0f172a;
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .fact-item {
+  border-bottom-color: var(--border-color);
+}
+
+html[data-theme="dark"] .friend-card {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow-sm);
+}
+
+html[data-theme="dark"] .friend-card:hover {
+  background: #334155;
+  border-color: #475569;
+  box-shadow: 0 4px 16px var(--shadow-md);
+}
+
+html[data-theme="dark"] .friend-name {
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .friend-desc,
+html[data-theme="dark"] .friend-cta {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .contact-link {
+  color: var(--text-primary);
+  border-bottom-color: transparent;
+}
+
+html[data-theme="dark"] .contact-link:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .contact-link i {
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .contact-link:hover i {
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .footer {
+  border-top-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+html[data-theme="dark"] .org-link,
+html[data-theme="dark"] .github-link,
+html[data-theme="dark"] .footer-github-link {
+  color: #3b82f6;
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+  .floating-buttons {
+    bottom: 1rem;
+    right: 1rem;
+    gap: 0.6rem;
+  }
+
+  .floating-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+  }
+  .header-logo {
+    width: 100px;
+    height: 100px;
+  }
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-quote {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+  .header-social {
+    justify-content: center;
+  }
+  .friend-list {
+    justify-content: center;
+  }
+  .friend-card {
+    max-width: 100%;
+    flex: 0 1 200px;
+  }
+  .contact-links {
+    justify-content: center;
+  }
+  .skill-tags {
+    justify-content: center;
+  }
+  .info-item {
+    flex-wrap: wrap;
+  }
+}
